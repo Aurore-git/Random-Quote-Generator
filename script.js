@@ -6591,20 +6591,25 @@ const colors = [
 let currentQuote = '';
 let currentAuthor = '';
 
+
+
 function getRandomColor() {
   const randomColor = colors[
     Math.floor(Math.random() * colors.length)
   ];
 
-  // Your code below
+
+
   var backgroundChange = document.getElementById('main');
-  backgroundChange.style.backgroundColor = randomColor;
-  backgroundChange.style.color = randomColor;
+   backgroundChange.style.backgroundColor = randomColor;
+
 
   var buttonDoc = document.getElementById('new-quote');
-  buttonDoc.style.backgroundColor = randomColor;
-  // Your code above
+   buttonDoc.style.color = randomColor;
+  
 }
+
+
 
 function getRandomQuote() {
   const randomQuote = quotesData[
@@ -6614,7 +6619,7 @@ function getRandomQuote() {
   currentQuote = randomQuote.text;
   currentAuthor = randomQuote.author;
 
-  // Your code below
+ 
 
  var citation = document.getElementById('text');
   citation.innerText = currentQuote;
@@ -6623,13 +6628,9 @@ function getRandomQuote() {
   author.innerText = currentAuthor;
 
 
-  // Your code above
+
 
   getRandomColor();
 }
 
 getRandomQuote();
-
-// Your code below
-
-// Your code above
